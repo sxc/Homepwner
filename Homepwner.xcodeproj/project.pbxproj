@@ -16,6 +16,7 @@
 		34753AE91E8E2EBF00B7D5F2 /* ItemsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34753AE81E8E2EBF00B7D5F2 /* ItemsViewController.swift */; };
 		34753AEB1E8E300300B7D5F2 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34753AEA1E8E300300B7D5F2 /* Item.swift */; };
 		34753AED1E8E36D300B7D5F2 /* ItemStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34753AEC1E8E36D300B7D5F2 /* ItemStore.swift */; };
+		34EBA5641E973F34000E3C16 /* ItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34EBA5631E973F34000E3C16 /* ItemCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,7 @@
 		34753AE81E8E2EBF00B7D5F2 /* ItemsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemsViewController.swift; sourceTree = "<group>"; };
 		34753AEA1E8E300300B7D5F2 /* Item.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
 		34753AEC1E8E36D300B7D5F2 /* ItemStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemStore.swift; sourceTree = "<group>"; };
+		34EBA5631E973F34000E3C16 /* ItemCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +111,7 @@
 				34753AE81E8E2EBF00B7D5F2 /* ItemsViewController.swift */,
 				34753AEA1E8E300300B7D5F2 /* Item.swift */,
 				34753AEC1E8E36D300B7D5F2 /* ItemStore.swift */,
+				34EBA5631E973F34000E3C16 /* ItemCell.swift */,
 			);
 			path = Homepwner;
 			sourceTree = "<group>";
@@ -199,6 +202,7 @@
 				TargetAttributes = {
 					34753AB61E8E2DD500B7D5F2 = {
 						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = SX2P37942F;
 						ProvisioningStyle = Automatic;
 					};
 					34753ACA1E8E2DD500B7D5F2 = {
@@ -269,6 +273,7 @@
 				34753AEB1E8E300300B7D5F2 /* Item.swift in Sources */,
 				34753AED1E8E36D300B7D5F2 /* ItemStore.swift in Sources */,
 				34753ABB1E8E2DD500B7D5F2 /* AppDelegate.swift in Sources */,
+				34EBA5641E973F34000E3C16 /* ItemCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -420,6 +425,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = SX2P37942F;
 				INFOPLIST_FILE = Homepwner/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.sigutian.Homepwner;
@@ -432,6 +438,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = SX2P37942F;
 				INFOPLIST_FILE = Homepwner/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.sigutian.Homepwner;
@@ -513,6 +520,7 @@
 				34753AE11E8E2DD500B7D5F2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		34753AE21E8E2DD500B7D5F2 /* Build configuration list for PBXNativeTarget "HomepwnerTests" */ = {
 			isa = XCConfigurationList;
@@ -521,6 +529,7 @@
 				34753AE41E8E2DD500B7D5F2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		34753AE51E8E2DD500B7D5F2 /* Build configuration list for PBXNativeTarget "HomepwnerUITests" */ = {
 			isa = XCConfigurationList;
@@ -529,6 +538,7 @@
 				34753AE71E8E2DD500B7D5F2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
