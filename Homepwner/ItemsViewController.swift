@@ -165,4 +165,11 @@ class ItemsViewController: UITableViewController {
         tableView.reloadData()
     }
     
+
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        tableView.reloadData()
+    }
+    
 }

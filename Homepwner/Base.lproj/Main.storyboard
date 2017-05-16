@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12118" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="qHk-c2-Wj4">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="qHk-c2-Wj4">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -113,7 +113,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="b8n-zN-8I2">
-                                <rect key="frame" x="16" y="28" width="343" height="631"/>
+                                <rect key="frame" x="16" y="72" width="343" height="587"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="wvJ-wZ-vkf">
                                         <rect key="frame" x="0.0" y="0.0" width="343" height="30"/>
@@ -129,6 +129,9 @@
                                                 <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
+                                                <connections>
+                                                    <outlet property="delegate" destination="ufu-A3-fZL" id="ZU1-ob-2Qx"/>
+                                                </connections>
                                             </textField>
                                         </subviews>
                                     </stackView>
@@ -167,7 +170,7 @@
                                         </subviews>
                                     </stackView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date Created" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HU9-p9-8aQ">
-                                        <rect key="frame" x="0.0" y="114" width="343" height="517"/>
+                                        <rect key="frame" x="0.0" y="114" width="343" height="473"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -179,12 +182,16 @@
                             </stackView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <gestureRecognizers/>
                         <constraints>
                             <constraint firstAttribute="leadingMargin" secondItem="b8n-zN-8I2" secondAttribute="leading" id="9Ir-gK-mgX"/>
                             <constraint firstItem="dua-eG-0nr" firstAttribute="top" secondItem="b8n-zN-8I2" secondAttribute="bottom" constant="8" id="A2O-9h-GdM"/>
                             <constraint firstItem="b8n-zN-8I2" firstAttribute="top" secondItem="TC5-uN-5pW" secondAttribute="bottom" constant="8" id="Fcc-Q1-IEL"/>
                             <constraint firstAttribute="trailingMargin" secondItem="b8n-zN-8I2" secondAttribute="trailing" id="Jrg-2R-0ST"/>
                         </constraints>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="zat-Br-TTI" appends="YES" id="HF0-kR-3WH"/>
+                        </connections>
                     </view>
                     <connections>
                         <outlet property="dateLabel" destination="HU9-p9-8aQ" id="eB6-d9-NE1"/>
@@ -194,6 +201,11 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OnA-da-end" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="zat-Br-TTI">
+                    <connections>
+                        <action selector="backgroundTapped:" destination="ufu-A3-fZL" id="j8O-0f-WDA"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="1732" y="285.60719640179911"/>
         </scene>
