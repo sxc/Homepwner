@@ -12,7 +12,7 @@ class ItemsViewController: UITableViewController {
     
     var itemStore: ItemStore!
     
-    @IBAction func addNewItem(_ sender: UIButton) {
+    @IBAction func addNewItem(_ sender: UIBarButtonItem) {
         // Create  a new item and add it to the store
         let newItem = itemStore.createItem()
         
@@ -171,5 +171,11 @@ class ItemsViewController: UITableViewController {
         
         tableView.reloadData()
     }
+    
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+        navigationItem.leftBarButtonItem = editButtonItem
+    }
+    
     
 }
