@@ -27,23 +27,7 @@ class ItemsViewController: UITableViewController {
         
     }
     
-    @IBAction func toggleEditingMode(_ sender: UIButton) {
-        // If you are currently in editing mode...
-        if isEditing {
-            // Thange text of button to inform user of state
-            sender.setTitle("Edit", for: .normal)
-            
-            // Turn off editing mode
-            setEditing(false, animated: true)
-        } else {
-            // Change text of button to inform user of state
-            sender.setTitle("Done", for: .normal)
-            
-            // Enter editing mode
-            setEditing(true, animated: true)
-        }
-        
-    }
+
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return itemStore.allItems.count
@@ -78,15 +62,7 @@ class ItemsViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        // Get the height of the staus bar 
-        let statusBarHeight = UIApplication.shared.statusBarFrame.height
-        
-        let insets = UIEdgeInsets(top: statusBarHeight, left: 0, bottom: 0, right: 0)
-        tableView.contentInset = insets
-        tableView.scrollIndicatorInsets = insets
-        
-//       tableView.rowHeight = 65
+
         
         tableView.rowHeight = UITableViewAutomaticDimension
         tableView.estimatedRowHeight = 65
