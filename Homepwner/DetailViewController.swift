@@ -8,12 +8,31 @@
 
 import UIKit
 
-class DetailViewController: UIViewController,UITextFieldDelegate {
+class DetailViewController: UIViewController,UITextFieldDelegate, UINavigationControllerDelegate, UIImagePickerControllerDelegate {
+    @IBOutlet var imageView: UIImageView!
     
     @IBOutlet var nameField: UITextField!
     @IBOutlet var serialNumberField: UITextField!
     @IBOutlet var valueField: UITextField!
     @IBOutlet var dateLabel: UILabel!
+    @IBAction func takePicture(_ sender: UIBarButtonItem) {
+        let imagePicker = UIImagePickerController()
+        
+        // if the device has picture, take picture, otherwise select from the photo library
+        
+        if UIImagePickerController.isSourceTypeAvailable(.camera) {
+            imagePicker.sourceType = .camera
+        } else {
+            imagePicker.sourceType = .photoLibrary
+        }
+        
+        imagePicker.delegate = self
+        
+        // Place the image controller on the screen
+        
+        present(imagePicker, animated: true, completion: nil)
+    }
+    
     
     var item: Item! {
         didSet{
