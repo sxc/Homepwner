@@ -43,6 +43,8 @@ class DetailViewController: UIViewController,UITextFieldDelegate, UINavigationCo
         }
     }
     
+    var imageStore: ImageStore!
+    
     @IBAction func backgroundTapped(_ sender: UITapGestureRecognizer) {
         view.endEditing(true)
     }
@@ -74,6 +76,15 @@ class DetailViewController: UIViewController,UITextFieldDelegate, UINavigationCo
         
         valueField.text = numberFormatter.string(from: NSNumber(value: item.valueInDollars))
         dateLabel.text = dateFormatter.string(from: item.dateCreated)
+        
+        // Get the item key
+        let key = item.itemKey
+        
+        // If there is an associated image with the item
+        // display it on the image view
+        let imageToDisplay = imageStore.image(forKey: key)
+        imageView.image = imageToDisplay
+        
     }
     
     override func viewWillDisappear(_ animated: Bool) {
@@ -102,6 +113,9 @@ class DetailViewController: UIViewController,UITextFieldDelegate, UINavigationCo
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         let image = info[UIImagePickerController.InfoKey.originalImage] as! UIImage
+        
+        // Store the image in the ImageStore for the item's key
+        imageStore.setImage(image, forKey: item.itemKey)
         
         imageView.image = image
         dismiss(animated: true, completion: nil)
