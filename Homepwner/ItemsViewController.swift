@@ -64,7 +64,7 @@ class ItemsViewController: UITableViewController {
         super.viewDidLoad()
 
         
-        tableView.rowHeight = UITableView.automaticDimension
+      //  tableView.rowHeight = UITableView.automaticDimension
        // tableView.estimatedRowHeight = 65
         tableView.rowHeight = UITableView.automaticDimension
         tableView.estimatedRowHeight = 65

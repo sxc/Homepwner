@@ -62,6 +62,8 @@ class DetailViewController: UIViewController,UITextFieldDelegate, UINavigationCo
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
+  
+        
         nameField.text = item.name
         serialNumberField.text = item.serialNumber
 //        valueField.text = "\(item.valueInDollars)"
