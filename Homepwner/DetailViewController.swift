@@ -15,6 +15,9 @@ class DetailViewController: UIViewController,UITextFieldDelegate, UINavigationCo
     @IBOutlet var serialNumberField: UITextField!
     @IBOutlet var valueField: UITextField!
     @IBOutlet var dateLabel: UILabel!
+    
+    
+    
     @IBAction func takePicture(_ sender: UIBarButtonItem) {
         let imagePicker = UIImagePickerController()
         
@@ -96,5 +99,12 @@ class DetailViewController: UIViewController,UITextFieldDelegate, UINavigationCo
     }
     
 
+    
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        let image = info[UIImagePickerController.InfoKey.originalImage] as! UIImage
+        
+        imageView.image = image
+        dismiss(animated: true, completion: nil)
+    }
     
 }
